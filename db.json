@@ -1,0 +1,24 @@
+{
+  "customers": [
+    {
+      "name": "Juan",
+      "company": "app",
+      "email": "cuadrosc99@gmail.com",
+      "phone": "3134554444",
+      "note": "dsa",
+      "id": 1
+    }
+  ],
+  "auth": [
+    {
+      "id": 1,
+      "username": "arthur",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "username": "kevindev",
+      "password": "12345"
+    }
+  ]
+}
