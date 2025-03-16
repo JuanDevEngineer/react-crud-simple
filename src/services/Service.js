@@ -1,4 +1,4 @@
-import requestApi from './config';
+import requestApi from "./config";
 
 export class Service {
   static _instanceService = null;
@@ -11,9 +11,9 @@ export class Service {
     return this._instanceService;
   }
 
-  async fetchService(endpoint, method = 'GET', data = {}) {
+  async fetchService(endpoint, method = "GET", data = {}) {
     let response;
-    if (method === 'GET') {
+    if (method === "GET") {
       try {
         response = await requestApi.get(`${endpoint}`);
         return response;
@@ -22,7 +22,7 @@ export class Service {
       }
     }
 
-    if (method !== 'GET') {
+    if (method !== "GET") {
       try {
         response = await requestApi.request(`${endpoint}`, {
           method: method,

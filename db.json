@@ -1,23 +1,23 @@
 {
   "customers": [
     {
-      "name": "Juan",
+      "name": "test",
       "company": "app",
-      "email": "cuadrosc99@gmail.com",
-      "phone": "3134554444",
-      "note": "dsa",
-      "id": 1
+      "email": "example@x.com",
+      "phone": "12345",
+      "note": "notes",
+      "id": "1"
     }
   ],
   "auth": [
     {
-      "id": 1,
-      "username": "arthur",
+      "id": "1",
+      "username": "test1",
       "password": "12345"
     },
     {
-      "id": 2,
-      "username": "kevindev",
+      "id": "2",
+      "username": "test2",
       "password": "12345"
     }
   ]

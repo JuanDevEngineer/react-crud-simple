@@ -1,4 +1,4 @@
-import { Service } from '../services/Service';
+import { Service } from "../services/Service";
 
 const useService = () => new Service();
 
