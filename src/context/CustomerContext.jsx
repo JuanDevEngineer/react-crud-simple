@@ -1,5 +1,5 @@
-import { createContext } from 'react';
-import useService from '../hooks/useService';
+import { createContext } from "react";
+import useService from "../hooks/useService";
 
 const CustomerContext = createContext({});
 
@@ -8,7 +8,7 @@ export function CustomerProvider({ children }) {
 
   const getCustomers = async () => {
     try {
-      return await service.fetchService('/customers', 'GET');
+      return await service.fetchService("/customers", "GET");
     } catch (e) {
       console.log(e);
     }
@@ -16,10 +16,10 @@ export function CustomerProvider({ children }) {
 
   const createCustomer = async (data) => {
     try {
-      const response = await service.fetchService('/customers', 'POST', data);
+      const response = await service.fetchService("/customers", "POST", data);
       const status = response.status;
       if (status === 201) {
-        console.log('customer create successful');
+        console.log("customer create successful");
       }
     } catch (e) {
       console.error(e);
@@ -28,7 +28,7 @@ export function CustomerProvider({ children }) {
 
   const getCustomerById = async (id) => {
     try {
-      return await service.fetchService(`/customers/${id}`, 'GET');
+      return await service.fetchService(`/customers/${id}`, "GET");
     } catch (e) {
       console.log(e);
     }
@@ -38,12 +38,12 @@ export function CustomerProvider({ children }) {
     try {
       const response = await service.fetchService(
         `/customers/${id}`,
-        'PUT',
-        data,
+        "PUT",
+        data
       );
       const status = response.status;
       if (status === 200) {
-        console.log('customer update successful');
+        console.log("customer update successful");
       }
     } catch (e) {
       console.error(e);
@@ -51,7 +51,7 @@ export function CustomerProvider({ children }) {
   };
 
   const deleteCustomer = async (id) => {
-    return service.fetchService(`/customers/${id}`, 'DELETE');
+    return service.fetchService(`/customers/${id}`, "DELETE");
   };
 
   return (
